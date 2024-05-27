@@ -1,10 +1,14 @@
-const NavButton = ({ text, onClick }) => {
+import React from "react";
+import "../styles/navbar.css";
+
+const NavButton = ({ text, selected, onClick }) => {
   return (
-    <li>
-      <button onClick={onClick} className="nav-button">
-        {text}
-      </button>
-    </li>
+    <button
+      className={`nav-button ${selected ? "selected" : ""}`}
+      onClick={onClick}
+    >
+      {text}
+    </button>
   );
 };
 

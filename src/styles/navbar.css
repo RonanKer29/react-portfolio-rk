@@ -24,30 +24,48 @@
   list-style: none;
   padding: 0.5rem 1rem;
   margin: 0 auto;
-  border: 1px solid rgba(255, 255, 255, 0.2); /* Bordure légère */
-  border-radius: 9999px; /* Bordure très arrondie */
-  background-color: #1b1b1b; /* Couleur de fond similaire */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 9999px;
+  background-color: #1b1b1b;
 }
 
 .nav-button {
   background-color: #3b3f42;
-  color: #f8efef;
+  color: #b0b0b0;
   border: none;
   padding: 0.5rem 1rem;
-  border-radius: 15px; /* Bordure très arrondie */
+  border-radius: 20px;
   cursor: pointer;
   font-size: 1rem;
-  transition: background-color 0.3s, color 0.3s; /* Transition douce */
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .nav-button.selected {
-  background-color: #5a5a5a; /* Couleur de fond du bouton sélectionné */
-  color: white; /* Couleur du texte du bouton sélectionné */
+  background-color: #5a5a5a;
+  color: white;
+}
+
+.nav-button:not(.selected) {
+  background-color: #262829;
+  color: #b0b0b0;
 }
 
 .nav-button:hover {
-  background-color: #505050; /* Couleur de fond au survol */
-  color: white; /* Couleur du texte au survol */
+  background-color: #505050;
+  color: white;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-icon {
+  color: #b0b0b0;
+}
+
+.social-icon:hover {
+  color: white;
 }
 
 @media (max-width: 1024px) {
@@ -57,5 +75,9 @@
 
   .nav-list {
     justify-content: center;
+  }
+
+  .social-icons {
+    display: none;
   }
 }
