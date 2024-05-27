@@ -1,0 +1,78 @@
+.animated-text {
+  font-size: 8rem; /* Ajustez la taille de la police selon vos besoins */
+  font-weight: bold;
+  color: white; /* Ajustez la couleur du texte selon vos besoins */
+}
+
+.home-page {
+  display: flex;
+  flex-direction: column; /* Changer de row à column pour un affichage vertical */
+  justify-content: center;
+  align-items: center;
+  /* height: 100vh; */
+  margin-top: 50px;
+}
+
+.animated-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image-container {
+  overflow: hidden;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.animated-image {
+  width: 350px;
+  height: 400px;
+  border-radius: 20px;
+  opacity: 0;
+  animation: fadeIn 5s ease forwards;
+  margin-bottom: 4rem;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.animated-text-container {
+  text-align: center;
+}
+
+.presentation {
+  margin-top: 20px;
+  text-align: center;
+  color: #5a5555;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .animated-text {
+    font-size: 1.5rem; /* Adjust text size for smaller screens */
+  }
+
+  .animated-image {
+    width: 200px; /* Adjust image size for smaller screens */
+    height: 250px; /* Adjust image size for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .animated-text {
+    font-size: 1.5rem; /* Further adjust text size for very small screens */
+  }
+
+  .animated-image {
+    width: 200px; /* Adjust image size for smaller screens */
+    height: 250px; /* Adjust image size for smaller screens */
+  }
+
+  .presentation {
+    font-size: 1rem; /* Adjust presentation text size for very small screens */
+  }
+}

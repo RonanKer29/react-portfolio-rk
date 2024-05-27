@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "../styles/animated-text.css";
 
 const AnimatedText = ({ text, delay = 80 }) => {
-  const [displayedText, setDisplayedText] = useState("");
+  const [characters, setCharacters] = useState([]);
 
   useEffect(() => {
     if (typeof text !== "string") {
@@ -10,15 +10,11 @@ const AnimatedText = ({ text, delay = 80 }) => {
     }
 
     let index = 0;
-    setDisplayedText(""); // Reset displayedText when text changes
+    setCharacters([]); // Reset characters when text changes
 
     const intervalId = setInterval(() => {
       if (index < text.length) {
-        setDisplayedText((prev) => {
-          const updatedText = prev + (text[index] || "");
-
-          return updatedText;
-        });
+        setCharacters((prev) => [...prev, text[index]]);
         index++;
       } else {
         clearInterval(intervalId);
@@ -28,7 +24,20 @@ const AnimatedText = ({ text, delay = 80 }) => {
     return () => clearInterval(intervalId); // Cleanup interval on component unmount
   }, [text, delay]);
 
-  return <span className="animated-text">{displayedText}</span>;
+  return (
+    <div className="animated-text-wrapper">
+      {characters.map((char, index) => (
+        <span
+          key={index}
+          className="animated-text"
+          style={{ "--animation-delay": `${index * delay}ms` }}
+        >
+          {char === " " ? "\u00A0" : char}{" "}
+          {/* Use non-breaking space for spaces */}
+        </span>
+      ))}
+    </div>
+  );
 };
 
 export default AnimatedText;

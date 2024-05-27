@@ -11,6 +11,8 @@
   align-items: center;
   justify-content: space-between;
   margin-top: 1rem;
+  position: relative; /* Ajouté pour le positionnement absolu des éléments enfants */
+  z-index: 1; /* S'assurer que la navbar est au-dessus du contenu */
 }
 
 .logo-container {
@@ -65,6 +67,10 @@
   display: none; /* Cacher par défaut */
   cursor: pointer;
   color: #b0b0b0;
+  position: absolute; /* Ajouté pour positionner absolument */
+  right: 20px; /* Ajuster selon votre besoin */
+  top: 20px; /* Ajuster selon votre besoin */
+  z-index: 2;
 }
 
 .social-icons {

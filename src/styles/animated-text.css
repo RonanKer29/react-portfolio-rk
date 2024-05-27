@@ -1,27 +1,19 @@
-/* Fichier: animated-text.css */
+.animated-text-wrapper {
+  overflow: hidden;
+  display: inline-block;
+}
 
 .animated-text {
-  font-size: 8rem; /* Ajustez la taille de la police selon vos besoins */
-  font-weight: bold;
-  color: white; /* Ajustez la couleur du texte selon vos besoins */
-  /* white-space: pre; Préserve les espaces et les sauts de ligne */
+  display: inline-block;
+  transform: translateY(-100%);
+  opacity: 0;
+  animation: slideDown 1s ease forwards;
+  animation-delay: var(--animation-delay, 0s); /* Use CSS variable for delay */
 }
 
-.home-page {
-  display: flex;
-  flex-direction: column; /* Changer de row à column pour un affichage vertical */
-  justify-content: center;
-  align-items: center;
-  height: 70vh;
-}
-
-.animated-text-container {
-  text-align: center;
-}
-
-.presentation {
-  margin-top: 20px; /* Ajouter un espace entre les deux éléments */
-  text-align: center;
-  color: #5a5555; /* Couleur du texte */
-  font-size: 1.5rem; /* Taille de police ajustable selon vos besoins */
+@keyframes slideDown {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
