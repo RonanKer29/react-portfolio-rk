@@ -24,13 +24,6 @@
   color: #ffffff;
 }
 
-.content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
-}
-
 @media (max-width: 1024px) {
   .content {
     flex-direction: column;
