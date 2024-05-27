@@ -7,27 +7,42 @@
   margin: 20px; /* Marge autour des cartes */
   max-width: calc(33.333% - 40px); /* Pour trois cartes par ligne */
   flex: 1; /* Permet aux cartes de prendre toute la largeur disponible */
+  background-size: cover; /* Assure que l'image de fond couvre toute la carte */
+  background-position: center; /* Centre l'image de fond */
+  background-repeat: no-repeat; /* Évite la répétition de l'image */
+  position: relative; /* Nécessaire pour le contenu absolu */
+  overflow: hidden; /* Pour couper le contenu débordant */
 }
 
 /* Optionnel: différents styles pour les cartes */
 .card.light {
-  background-color: #ffffff;
   color: #000000;
 }
 
 .card.dark {
-  background-color: #333333;
   color: #ffffff;
 }
 
 .card.primary {
-  background-color: #007bff;
   color: #ffffff;
+}
+
+.card-content {
+  position: relative;
+  z-index: 1; /* Met le contenu au-dessus de l'image de fond */
+  background: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Ajoute un fond semi-transparent au contenu */
+  padding: 20px;
+  border-radius: 10px;
 }
 
 @media (max-width: 1024px) {
   .card {
-    max-width: 100%;
+    max-width: 100%; /* Les cartes prennent toute la largeur disponible */
     margin: 10px 0; /* Marge entre les cartes pour les petits écrans */
   }
 }

@@ -1,0 +1,73 @@
+.contact-card {
+  margin-top: 100px;
+  background-color: #1a1a1a; /* Couleur de fond */
+  border-radius: 20px; /* Bordure arrondie */
+  padding: 20px;
+  width: 500px; /* Largeur de la carte */
+  height: 500px; /* Hauteur de la carte */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre légère */
+  text-align: center;
+}
+
+.contact-message h1 {
+  font-size: 5rem;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.contact-input {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  margin-top: 20px;
+}
+
+.contact-input textarea {
+  width: calc(100% - 60px);
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  background-color: #333;
+  color: white;
+  padding-left: 20px;
+  resize: none;
+}
+
+.contact-input button {
+  background-color: #007bff;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.contact-input button:hover {
+  background-color: #0056b3;
+}
+
+.contact-input textarea::placeholder {
+  color: #b0b0b0;
+  font-size: 20px;
+}
+
+.contact-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
