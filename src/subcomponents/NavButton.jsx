@@ -1,5 +1,3 @@
-import React from "react";
-
 const NavButton = ({ text, onClick }) => {
   return (
     <li>
