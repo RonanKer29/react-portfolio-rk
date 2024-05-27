@@ -1,9 +1,10 @@
 import React from "react";
 import Card from "../components/Card";
+import "../styles/about.css"; // Assurez-vous que le chemin est correct
 
 const AboutPage = () => {
   return (
-    <div className="about-page">
+    <div className="cards-container">
       <Card className="primary">
         <h2>Card Title</h2>
         <p>This is a customizable card.</p>
