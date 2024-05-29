@@ -7,7 +7,7 @@
   display: inline-block;
   transform: translateY(-100%);
   opacity: 0;
-  animation: slideDown 1s ease forwards;
+  animation: slideDown 0.1s ease forwards;
   animation-delay: var(--animation-delay, 0s); /* Use CSS variable for delay */
 }
 

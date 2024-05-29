@@ -1,6 +1,6 @@
 .contact-card {
   margin-top: 100px;
-  background-color: #1a1a1a; /* Couleur de fond */
+  background-color: #111927; /* Couleur de fond */
   border-radius: 20px; /* Bordure arrondie */
   padding: 20px;
   width: 500px; /* Largeur de la carte */
@@ -36,7 +36,7 @@
   padding: 10px;
   border: none;
   border-radius: 20px;
-  background-color: #333;
+  background-color: #0d2847;
   color: white;
   padding-left: 20px;
   resize: none;

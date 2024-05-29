@@ -9,34 +9,61 @@
   flex-direction: column; /* Changer de row à column pour un affichage vertical */
   justify-content: center;
   align-items: center;
-  /* height: 100vh; */
   margin-top: 50px;
 }
 
-.animated-container {
+.image-and-text {
   display: flex;
-  flex-direction: column;
+  flex-direction: row; /* Affiche l'image et le texte côte à côte */
+  justify-content: space-around;
   align-items: center;
-}
-
-.image-container {
-  overflow: hidden;
-  display: inline-block;
   margin-bottom: 20px;
+  /* max-width: 80%; Utiliser max-width pour limiter la largeur */
+  /* margin: 0 auto; Centre le conteneur horizontalement */
 }
 
-.animated-image {
-  width: 350px;
-  height: 400px;
-  border-radius: 20px;
-  opacity: 0;
-  animation: fadeIn 5s ease forwards;
-  margin-bottom: 4rem;
+.office-image {
+  border-radius: 50%;
+  width: 250px; /* Ajustez la largeur de l'image selon vos besoins */
+  height: 250px; /* Ajustez la hauteur de l'image selon vos besoins */
+}
+
+.waving-hand {
+  display: inline-block;
+  animation: wave 2s infinite;
+  transform-origin: 70% 70%; /* Adjust the origin to make the wave look natural */
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  }
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
 
 @keyframes fadeIn {
   to {
-    opacity: 1;
+    opacity: 0.7; /* Final opacity for a more transparent look */
   }
 }
 
@@ -52,24 +79,57 @@
 }
 
 @media (max-width: 768px) {
+  .image-and-text {
+    flex-direction: column; /* Affiche les éléments verticalement sur les petits écrans */
+    align-items: center;
+    width: 90%; /* Ajuste la largeur pour les écrans plus petits */
+  }
+
+  .image-container {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
   .animated-text {
-    font-size: 1.5rem; /* Adjust text size for smaller screens */
+    font-size: 2rem; /* Adjust text size for smaller screens */
   }
 
   .animated-image {
-    width: 200px; /* Adjust image size for smaller screens */
-    height: 250px; /* Adjust image size for smaller screens */
+    width: 200px; /* Taille fixe de l'image pour les petits écrans */
+    height: 250px; /* Taille fixe de l'image pour les petits écrans */
+  }
+
+  .custom-text {
+    font-size: 1.2rem; /* Adjust custom text size for smaller screens */
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .presentation {
+    font-size: 1.2rem; /* Adjust presentation text size for smaller screens */
   }
 }
 
 @media (max-width: 480px) {
+  .image-and-text {
+    flex-direction: column; /* Assure un affichage vertical pour les très petits écrans */
+    align-items: center;
+    width: 95%; /* Ajuste la largeur pour les très petits écrans */
+  }
+
   .animated-text {
     font-size: 1.5rem; /* Further adjust text size for very small screens */
   }
 
   .animated-image {
-    width: 200px; /* Adjust image size for smaller screens */
-    height: 250px; /* Adjust image size for smaller screens */
+    width: 200px; /* Taille fixe de l'image pour les très petits écrans */
+    height: 250px; /* Taille fixe de l'image pour les très petits écrans */
+  }
+
+  .custom-text {
+    font-size: 1rem; /* Further adjust custom text size for very small screens */
+    text-align: center;
+    margin-bottom: 20px;
   }
 
   .presentation {

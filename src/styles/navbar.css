@@ -11,8 +11,8 @@
   align-items: center;
   justify-content: space-between;
   margin-top: 1rem;
-  position: relative; /* Ajouté pour le positionnement absolu des éléments enfants */
-  z-index: 1; /* S'assurer que la navbar est au-dessus du contenu */
+  position: relative;
+  z-index: 1;
 }
 
 .logo-container {
@@ -28,13 +28,14 @@
   list-style: none;
   padding: 0.5rem 1rem;
   margin: 0 auto;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(245, 245, 245, 0.2);
   border-radius: 9999px;
-  background-color: #1b1b1b;
+  background-color: #111927;
 }
 
 .nav-button {
-  background-color: #3b3f42;
+  position: relative; /* Pour positionner le pseudo-élément par rapport au bouton */
+  background-color: #111927;
   color: #b0b0b0;
   border: none;
   padding: 0.5rem 1rem;
@@ -46,30 +47,51 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden; /* Pour éviter que l'animation dépasse */
+}
+
+.nav-button::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px; /* Hauteur de la ligne de soulignement */
+  bottom: 0;
+  left: 0;
+  background-color: white; /* Couleur de la ligne de soulignement */
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-button:hover::after {
+  width: 100%; /* Étend la ligne de soulignement sur toute la largeur du bouton */
 }
 
 .nav-button.selected {
-  background-color: #5a5a5a;
-  color: white;
+  background-color: #003362;
+  color: #c2e6ff;
+}
+
+.nav-button.selected::after {
+  width: 100%;
+  background-color: #c2e6ff;
 }
 
 .nav-button:not(.selected) {
-  background-color: #262829;
+  background-color: #0d2847;
   color: #b0b0b0;
 }
 
 .nav-button:hover {
-  background-color: #505050;
-  color: white;
+  background-color: #004074;
+  color: #c2e6ff;
 }
 
 .menu-icon {
-  display: none; /* Cacher par défaut */
+  display: none;
   cursor: pointer;
   color: #b0b0b0;
-  position: absolute; /* Ajouté pour positionner absolument */
-  right: 20px; /* Ajuster selon votre besoin */
-  top: 20px; /* Ajuster selon votre besoin */
+  position: absolute;
+  right: 20px;
+  top: 20px;
   z-index: 2;
 }
 
@@ -83,7 +105,7 @@
 }
 
 .social-icon:hover {
-  color: white;
+  color: #c2e6ff;
 }
 
 @media (max-width: 1024px) {
@@ -95,40 +117,7 @@
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 60px; /* Ajuster selon la hauteur de votre navbar */
-    right: 20px;
-    background-color: #2c2c2c;
-    border-radius: 10px;
-    padding: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-
-  .menu-icon {
-    display: block;
-  }
-
-  .social-icons {
-    display: none;
-  }
-}
-
-.content {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  margin-top: 20px;
-}
-
-@media (max-width: 1024px) {
-  .nav-buttons {
-    display: none;
-  }
-
-  .nav-buttons.open {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 60px; /* Ajuster selon la hauteur de votre navbar */
+    top: 60px;
     right: 20px;
     background-color: #2c2c2c;
     border-radius: 10px;
