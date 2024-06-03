@@ -127,10 +127,28 @@
 
   .menu-icon {
     display: block;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 2;
   }
 
   .social-icons {
     display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-list {
+    justify-content: space-between;
+  }
+
+  .menu-icon {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 2;
   }
 }
 

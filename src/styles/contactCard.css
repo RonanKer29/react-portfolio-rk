@@ -1,5 +1,5 @@
 .contact-card {
-  margin-top: 100px;
+  margin-top: 38px;
   background-color: #111927; /* Couleur de fond */
   border-radius: 20px; /* Bordure arrondie */
   padding: 20px;
@@ -70,4 +70,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media (max-width: 1024px) {
+  .contact-card {
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-card {
+  }
 }

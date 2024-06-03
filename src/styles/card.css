@@ -1,48 +1,37 @@
 .card {
-  background-color: #2c2c2c; /* Couleur de fond par défaut */
-  border-radius: 20px; /* Bordure arrondie */
-  padding: 20px; /* Padding intérieur */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère */
-  color: #ffffff; /* Couleur du texte par défaut */
-  margin: 20px; /* Marge autour des cartes */
-  max-width: calc(33.333% - 40px); /* Pour trois cartes par ligne */
-  flex: 1; /* Permet aux cartes de prendre toute la largeur disponible */
-  background-size: cover; /* Assure que l'image de fond couvre toute la carte */
-  background-position: center; /* Centre l'image de fond */
-  background-repeat: no-repeat; /* Évite la répétition de l'image */
-  position: relative; /* Nécessaire pour le contenu absolu */
-  overflow: hidden; /* Pour couper le contenu débordant */
-}
-
-/* Optionnel: différents styles pour les cartes */
-.card.light {
-  color: #000000;
-}
-
-.card.dark {
+  background-color: #0d2847;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   color: #ffffff;
-}
-
-.card.primary {
-  color: #ffffff;
+  margin: 20px;
+  max-width: calc(33.333% - 40px);
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
 }
 
 .card-content {
   position: relative;
-  z-index: 1; /* Met le contenu au-dessus de l'image de fond */
-  background: rgba(
-    0,
-    0,
-    0,
-    0.5
-  ); /* Ajoute un fond semi-transparent au contenu */
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.5);
   padding: 20px;
   border-radius: 10px;
 }
 
 @media (max-width: 1024px) {
   .card {
-    max-width: 100%; /* Les cartes prennent toute la largeur disponible */
-    margin: 10px 0; /* Marge entre les cartes pour les petits écrans */
+    max-width: 100%;
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    max-width: 100%;
+    margin: 10px 0;
   }
 }

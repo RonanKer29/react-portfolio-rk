@@ -3,14 +3,35 @@ import AnimatedText from "../components/AnimatedText";
 import "../styles/home-page.css";
 import "../styles/animated-text.css";
 import "../styles/social-links.css";
+import "../styles/skills.css";
 import photo from "../assets/photo-japon.jpg";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
+import CardContainer from "../components/CardContainer";
+import ContactCard from "../components/ContactCard";
 
 const HomePage = () => {
   const handleLinkClick = (url) => {
     window.open(url, "_blank", "noopener,noreferrer");
   };
+
+  const projects = [
+    {
+      className: "project-card",
+      backgroundImage: "url_of_project_image_1",
+      title: "Project 1",
+      description: "Description of project 1",
+      content: <a href="project_link_1">Learn more</a>,
+    },
+    {
+      className: "project-card",
+      backgroundImage: "url_of_project_image_2",
+      title: "Project 2",
+      description: "Description of project 2",
+      content: <a href="project_link_2">Learn more</a>,
+    },
+    // Add more projects as needed
+  ];
 
   return (
     <div className="home-page">
@@ -40,14 +61,14 @@ const HomePage = () => {
               }
             >
               <FaLinkedin size={24} className="social-icon" />
-              Linkedin
+              <span className="social-text">Linkedin</span>
             </div>
             <div
               className="social-button"
               onClick={() => handleLinkClick("https://github.com/RonanKer29")}
             >
               <FaGithub size={24} className="social-icon" />
-              Github
+              <span className="social-text">Github</span>
             </div>
             <div
               className="social-button"
@@ -56,13 +77,53 @@ const HomePage = () => {
               }
             >
               <IoIosMail size={24} className="social-icon" />
-              kervella.ronan@hotmail.com
+              <span className="social-text">kervella.ronan@hotmail.com</span>
             </div>
           </div>
         </div>
         <div className="image-container">
           <img src={photo} alt="Ronan Kervella" className="profile-image" />
         </div>
+      </div>
+      <div className="skills-section">
+        <h2>Skills</h2>
+        <div className="skills-container">
+          <div className="skills-column">
+            <h3>Design</h3>
+            <ul>
+              <li>Figma</li>
+              <li>Tailwind</li>
+            </ul>
+          </div>
+          <div className="skills-column">
+            <h3>Front-end</h3>
+            <ul>
+              <li>JavaScript</li>
+              <li>React</li>
+            </ul>
+          </div>
+          <div className="skills-column">
+            <h3>Back-end</h3>
+            <ul>
+              <li>Rails</li>
+              <li>PostgreSQL</li>
+            </ul>
+          </div>
+          <div className="skills-column">
+            <h3>Other</h3>
+            <ul>
+              <li>Git & GitHub</li>
+              <li>Heroku</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div className="projects-section">
+        <h2>Projects</h2>
+        <CardContainer cards={projects} />
+      </div>
+      <div className="contact-page">
+        <ContactCard />
       </div>
     </div>
   );

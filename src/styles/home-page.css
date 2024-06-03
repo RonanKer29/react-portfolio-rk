@@ -1,18 +1,15 @@
 .animated-text {
   font-size: 2rem; /* Ajustez la taille de la police selon vos besoins */
-
   color: #c2e6ff; /* Ajustez la couleur du texte selon vos besoins */
 }
 
 .animated-text-container {
   font-size: 2rem; /* Ajustez la taille de la police selon vos besoins */
-  /* font-weight: bold; */
   color: #c2e6ff; /* Ajustez la couleur du texte selon vos besoins */
 }
 
 .presentation-name {
   font-size: 2rem; /* Ajustez la taille de la police selon vos besoins */
-  /* font-weight: bold; */
   color: #c2e6ff; /* Ajustez la couleur du texte selon vos besoins */
 }
 
@@ -22,8 +19,6 @@
 }
 
 .presentation {
-  /* margin-top: 20px; */
-  /* text-align: center; */
   color: #c2e6ff;
   font-size: 1.5rem;
 }
@@ -32,8 +27,9 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100vh;
+  /* height: 100vh; */
   padding: 20px;
+  margin-top: 100px;
 }
 
 .image-and-text {
@@ -85,33 +81,6 @@
   animation: wave 2s infinite;
   transform-origin: 70% 70%; /* Adjust the origin to make the wave look natural */
 }
-/*
-@keyframes wave {
-  0% {
-    transform: rotate(0deg);
-  }
-  10% {
-    transform: rotate(14deg);
-  }
-  20% {
-    transform: rotate(-8deg);
-  }
-  30% {
-    transform: rotate(14deg);
-  }
-  40% {
-    transform: rotate(-4deg);
-  }
-  50% {
-    transform: rotate(10deg);
-  }
-  60% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-} */
 
 @keyframes fadeIn {
   to {
@@ -119,65 +88,72 @@
   }
 }
 
-/* .animated-text-container {
-  text-align: center;
-} */
-
 @media (max-width: 768px) {
   .image-and-text {
-    flex-direction: column; /* Affiche les éléments verticalement sur les petits écrans */
-    align-items: center;
-    width: 90%; /* Ajuste la largeur pour les écrans plus petits */
+    flex-direction: column;
   }
 
+  .text-container {
+    margin-bottom: 40px;
+  }
+
+  .text-container,
   .image-container {
-    margin-right: 0;
+    width: 100%;
+  }
+
+  .profile-image {
+    max-width: 200px;
+  }
+
+  .presentation-name,
+  .animated-text-container {
+    font-size: 1.2rem;
+  }
+
+  .skills-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skills-column {
+    width: 100%;
+    max-width: 400px;
     margin-bottom: 20px;
   }
 
-  .animated-text {
-    font-size: 2rem; /* Adjust text size for smaller screens */
-  }
-
-  .animated-image {
-    width: 200px; /* Taille fixe de l'image pour les petits écrans */
-    height: 250px; /* Taille fixe de l'image pour les petits écrans */
-  }
-
-  .custom-text {
-    font-size: 1.2rem; /* Adjust custom text size for smaller screens */
-    text-align: center;
-    margin-bottom: 20px;
-  }
-
-  .presentation {
-    font-size: 1.2rem; /* Adjust presentation text size for smaller screens */
+  .social-text {
+    display: none;
   }
 }
 
 @media (max-width: 480px) {
-  .image-and-text {
-    flex-direction: column; /* Assure un affichage vertical pour les très petits écrans */
+  .profile-image {
+    max-width: 150px;
+  }
+
+  .presentation-name,
+  .animated-text-container {
+    font-size: 1rem;
+  }
+
+  .social-button {
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+
+  .skills-container {
+    flex-direction: column;
     align-items: center;
-    width: 95%; /* Ajuste la largeur pour les très petits écrans */
   }
 
-  .animated-text {
-    font-size: 1.5rem; /* Further adjust text size for very small screens */
-  }
-
-  .animated-image {
-    width: 200px; /* Taille fixe de l'image pour les très petits écrans */
-    height: 250px; /* Taille fixe de l'image pour les très petits écrans */
-  }
-
-  .custom-text {
-    font-size: 1rem; /* Further adjust custom text size for very small screens */
-    text-align: center;
+  .skills-column {
+    width: 100%;
+    max-width: 300px;
     margin-bottom: 20px;
   }
 
-  .presentation {
-    font-size: 1rem; /* Adjust presentation text size for very small screens */
+  .social-text {
+    display: none;
   }
 }

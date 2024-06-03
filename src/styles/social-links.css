@@ -25,3 +25,22 @@
 .social-icon {
   margin-right: 8px; /* Ajustez l'espace entre l'icône et le texte */
 }
+
+@media (max-width: 1024px) {
+  .social-links {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .social-button {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .social-links {
+    justify-content: center;
+  }
+}
