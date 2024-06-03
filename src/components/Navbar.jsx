@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import Logo from "../assets/logo.png";
+import Logo from "../assets/photo-ronan.jpg";
 import "../styles/navbar.css";
 import { FaLinkedin, FaGithub, FaBars } from "react-icons/fa";
 
