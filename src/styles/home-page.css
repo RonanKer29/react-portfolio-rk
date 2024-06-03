@@ -1,25 +1,77 @@
 .animated-text {
-  font-size: 8rem; /* Ajustez la taille de la police selon vos besoins */
-  font-weight: bold;
-  color: white; /* Ajustez la couleur du texte selon vos besoins */
+  font-size: 2rem; /* Ajustez la taille de la police selon vos besoins */
+
+  color: #c2e6ff; /* Ajustez la couleur du texte selon vos besoins */
+}
+
+.animated-text-container {
+  font-size: 2rem; /* Ajustez la taille de la police selon vos besoins */
+  /* font-weight: bold; */
+  color: #c2e6ff; /* Ajustez la couleur du texte selon vos besoins */
+}
+
+.presentation-name {
+  font-size: 2rem; /* Ajustez la taille de la police selon vos besoins */
+  /* font-weight: bold; */
+  color: #c2e6ff; /* Ajustez la couleur du texte selon vos besoins */
+}
+
+.align-inline {
+  display: inline-flex;
+  align-items: center;
+}
+
+.presentation {
+  /* margin-top: 20px; */
+  /* text-align: center; */
+  color: #c2e6ff;
+  font-size: 1.5rem;
 }
 
 .home-page {
   display: flex;
-  flex-direction: column; /* Changer de row à column pour un affichage vertical */
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  margin-top: 50px;
+  height: 100vh;
+  padding: 20px;
 }
 
 .image-and-text {
   display: flex;
-  flex-direction: row; /* Affiche l'image et le texte côte à côte */
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
-  /* max-width: 80%; Utiliser max-width pour limiter la largeur */
-  /* margin: 0 auto; Centre le conteneur horizontalement */
+  width: 100%;
+}
+
+.text-container {
+  width: 66.66%; /* 2/3 de la largeur */
+}
+
+.text-container > * {
+  margin-bottom: 20px; /* Espace vertical entre les éléments */
+}
+
+.text-container > *:last-child {
+  margin-bottom: 0; /* Supprime la marge inférieure du dernier élément */
+}
+
+.image-container {
+  width: 33.33%; /* 1/3 de la largeur */
+  display: flex;
+  justify-content: center;
+}
+
+.profile-image {
+  width: 100%;
+  max-width: 300px; /* Limite la taille maximale de l'image */
+  height: auto;
+  border-radius: 40px; /* Rend l'image circulaire */
+}
+
+.animated-text-container,
+.presentation-name {
+  font-size: 1.5rem; /* Ajustez la taille de la police selon vos besoins */
+  color: #c2e6ff; /* Ajustez la couleur du texte selon vos besoins */
 }
 
 .office-image {
@@ -33,7 +85,7 @@
   animation: wave 2s infinite;
   transform-origin: 70% 70%; /* Adjust the origin to make the wave look natural */
 }
-
+/*
 @keyframes wave {
   0% {
     transform: rotate(0deg);
@@ -59,7 +111,7 @@
   100% {
     transform: rotate(0deg);
   }
-}
+} */
 
 @keyframes fadeIn {
   to {
@@ -67,16 +119,9 @@
   }
 }
 
-.animated-text-container {
+/* .animated-text-container {
   text-align: center;
-}
-
-.presentation {
-  margin-top: 20px;
-  text-align: center;
-  color: #5a5555;
-  font-size: 1.5rem;
-}
+} */
 
 @media (max-width: 768px) {
   .image-and-text {

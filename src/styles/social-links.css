@@ -1,0 +1,27 @@
+.social-links {
+  display: flex;
+  gap: 16px; /* Ajustez l'écart entre les boutons si nécessaire */
+}
+
+.social-button {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  background: none;
+  border: none;
+  padding: 8px; /* Ajustez le padding si nécessaire */
+  border-radius: 10px;
+  transition: background-color 0.3s;
+  color: white;
+  background-color: #003362;
+}
+
+.social-button:hover {
+  background-color: #004074;
+}
+
+.social-icon {
+  margin-right: 8px; /* Ajustez l'espace entre l'icône et le texte */
+}
