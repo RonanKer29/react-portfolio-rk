@@ -5,8 +5,11 @@ import "../styles/animated-text.css";
 import "../styles/social-links.css";
 import "../styles/skills.css";
 import photo from "../assets/photo-japon.jpg";
-import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaFigma, FaReact } from "react-icons/fa";
+import { RiTailwindCssFill } from "react-icons/ri";
 import { IoIosMail } from "react-icons/io";
+import { IoLogoJavascript } from "react-icons/io5";
+import { SiRubyonrails, SiPostgresql, SiHeroku } from "react-icons/si";
 import CardContainer from "../components/CardContainer";
 import ContactCard from "../components/ContactCard";
 
@@ -91,29 +94,53 @@ const HomePage = () => {
           <div className="skills-column">
             <h3>Design</h3>
             <ul>
-              <li>Figma</li>
-              <li>Tailwind</li>
+              <li>
+                <FaFigma />
+                Figma
+              </li>
+              <li>
+                <RiTailwindCssFill />
+                Tailwind
+              </li>
             </ul>
           </div>
           <div className="skills-column">
             <h3>Front-end</h3>
             <ul>
-              <li>JavaScript</li>
-              <li>React</li>
+              <li>
+                <IoLogoJavascript />
+                JavaScript
+              </li>
+              <li>
+                <FaReact />
+                React
+              </li>
             </ul>
           </div>
           <div className="skills-column">
             <h3>Back-end</h3>
             <ul>
-              <li>Rails</li>
-              <li>PostgreSQL</li>
+              <li>
+                <SiRubyonrails />
+                Rails
+              </li>
+              <li>
+                <SiPostgresql />
+                PostgreSQL
+              </li>
             </ul>
           </div>
           <div className="skills-column">
             <h3>Other</h3>
             <ul>
-              <li>Git & GitHub</li>
-              <li>Heroku</li>
+              <li>
+                <FaGithub />
+                Git & GitHub
+              </li>
+              <li>
+                <SiHeroku />
+                Heroku
+              </li>
             </ul>
           </div>
         </div>

@@ -2,7 +2,7 @@
   width: 100%;
   max-width: 1000px;
   margin: 40px auto;
-  text-align: center;
+  /* text-align: center; */
   color: #c2e6ff;
 }
 
@@ -10,6 +10,7 @@
   font-size: 2rem;
   margin-bottom: 20px;
   color: white;
+  text-align: center;
 }
 
 .skills-container {
@@ -38,6 +39,15 @@
 .skills-column ul li {
   font-size: 1.2rem;
   margin-bottom: 8px;
+}
+
+.skills-column li {
+  text-align: left;
+  justify-content: left;
+}
+
+.skills-column ul li svg {
+  margin-right: 8px; /* Ajustez la valeur selon l'espace désiré */
 }
 
 .projects-section {
