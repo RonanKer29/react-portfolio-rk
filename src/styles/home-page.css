@@ -37,6 +37,7 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  height: 100vh;
 }
 
 .text-container {
@@ -91,6 +92,7 @@
 @media (max-width: 768px) {
   .image-and-text {
     flex-direction: column;
+    height: auto;
   }
 
   .text-container {
