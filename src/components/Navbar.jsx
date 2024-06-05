@@ -13,54 +13,48 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="nav-list">
+    <nav className="nav-list" id="home">
       <div className="logo-container">
-        <img src={Logo} alt="Logo" id="logo" />
+        <a href="#home">
+          <img src={Logo} alt="Logo" id="logo" />
+        </a>
       </div>
       <ul className={`nav-buttons ${menuOpen ? "open" : ""}`}>
         <li>
-          <Link
-            to="/"
-            className={`nav-button ${
-              location.pathname === "/" ? "selected" : ""
-            }`}
-            onClick={() => setMenuOpen(false)}
-          >
-            Home
-          </Link>
-        </li>
-        <li>
-          <Link
-            to="/about"
-            className={`nav-button ${
-              location.pathname === "/about" ? "selected" : ""
-            }`}
+          <a
+            href="#about"
+            className="nav-button"
             onClick={() => setMenuOpen(false)}
           >
             About
-          </Link>
+          </a>
         </li>
         <li>
-          <Link
-            to="/projects"
-            className={`nav-button ${
-              location.pathname === "/projects" ? "selected" : ""
-            }`}
+          <a
+            href="#skills"
+            className="nav-button"
+            onClick={() => setMenuOpen(false)}
+          >
+            Skills
+          </a>
+        </li>
+        <li>
+          <a
+            href="#projects"
+            className="nav-button"
             onClick={() => setMenuOpen(false)}
           >
             Projects
-          </Link>
+          </a>
         </li>
         <li>
-          <Link
-            to="/contact"
-            className={`nav-button ${
-              location.pathname === "/contact" ? "selected" : ""
-            }`}
+          <a
+            href="#contact"
+            className="nav-button"
             onClick={() => setMenuOpen(false)}
           >
             Contact
-          </Link>
+          </a>
         </li>
       </ul>
       <div className="menu-icon" onClick={handleMenuToggle}>

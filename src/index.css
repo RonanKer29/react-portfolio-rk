@@ -9,6 +9,10 @@
   /* border: red 1px solid; */
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   background: #0d1520;
@@ -31,12 +35,13 @@ p {
 }
 
 .global-container {
-  margin: 50px 250px;
-  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-@media (max-width: 1024px) {
+@media (min-width: 1025px) {
   .global-container {
-    margin: 20px 10px;
+    padding-left: 250px;
+    padding-right: 250px;
   }
 }

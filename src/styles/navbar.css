@@ -1,5 +1,3 @@
-/* Fichier: navbar.css */
-
 #logo {
   width: 50px;
   height: 50px;
@@ -7,12 +5,24 @@
 }
 
 .nav-list {
+  position: fixed; /* Fixe la navbar en haut de la page */
+  top: 0;
+  left: 0;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 1rem;
-  position: relative;
-  z-index: 1;
+  padding: 10px 20px;
+  /* margin: 0px 250px; */
+  background-color: #0d1520;
+  z-index: 1000; /* Assurez-vous que la navbar est au-dessus des autres éléments */
+}
+
+@media (min-width: 1025px) {
+  .nav-list {
+    padding-left: 300px;
+    padding-right: 300px;
+  }
 }
 
 .logo-container {

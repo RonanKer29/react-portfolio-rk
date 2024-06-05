@@ -37,8 +37,8 @@ const HomePage = () => {
   ];
 
   return (
-    <div className="home-page">
-      <div className="image-and-text">
+    <div className="home-page" id="home">
+      <div className="image-and-text" id="about">
         <div className="text-container">
           <div className="presentation-name">
             <p>Hi there, I'm -</p>
@@ -88,7 +88,7 @@ const HomePage = () => {
           <img src={photo} alt="Ronan Kervella" className="profile-image" />
         </div>
       </div>
-      <div className="skills-section">
+      <div className="skills-section" id="skills">
         <h2>Skills</h2>
         <div className="skills-container">
           <div className="skills-column">
@@ -145,11 +145,11 @@ const HomePage = () => {
           </div>
         </div>
       </div>
-      <div className="projects-section">
+      <div className="projects-section" id="projects">
         <h2>Projects</h2>
         <CardContainer cards={projects} />
       </div>
-      <div className="contact-page">
+      <div className="contact-page" id="contact">
         <ContactCard />
       </div>
     </div>
