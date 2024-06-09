@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../styles/animated-text.css";
 
-const AnimatedText = ({ text, delay = 30 }) => {
+const AnimatedText = ({ text, delay = 10 }) => {
   const [characters, setCharacters] = useState([]);
 
   useEffect(() => {

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import AnimatedText from "../components/AnimatedText";
 import "../styles/home-page.css";
 import "../styles/animated-text.css";
@@ -14,6 +14,31 @@ import CardContainer from "../components/CardContainer";
 import ContactCard from "../components/ContactCard";
 
 const HomePage = () => {
+  const [textVisible, setTextVisible] = useState(false);
+  const [animatedTextVisible, setAnimatedTextVisible] = useState(false);
+
+  useEffect(() => {
+    const textContainer = document.querySelector(".text-container");
+    const imageContainer = document.querySelector(".image-container");
+
+    setTimeout(() => {
+      textContainer.classList.add("appear");
+      setTextVisible(true);
+    }, 100);
+
+    setTimeout(() => {
+      imageContainer.classList.add("appear");
+    }, 250);
+  }, []);
+
+  useEffect(() => {
+    if (textVisible) {
+      setTimeout(() => {
+        setAnimatedTextVisible(true);
+      }, 200); // Déclencher l'animation du texte après 0,5 seconde
+    }
+  }, [textVisible]);
+
   const handleLinkClick = (url) => {
     window.open(url, "_blank", "noopener,noreferrer");
   };
@@ -48,13 +73,16 @@ const HomePage = () => {
           <div className="animated-text-container">
             I am a passionate{" "}
             <span className="align-inline">
-              <AnimatedText text=" Fullstack Developer" />
+              {animatedTextVisible && (
+                <AnimatedText text=" Fullstack Developer" />
+              )}
             </span>
             , currently enhancing my skills in building interactive and
             responsive web applications with Node.js and React. With a solid
-            background in HTML, CSS, and JavaScript, I am focused on improving
-            user experiences and web application performance. From design to
-            development, I can help you with your web development projects.
+            background in Rails, JavaScript, React , HTML and CSS I am focused
+            on improving user experiences and web application performance. From
+            design to development, I can help you with your web development
+            projects.
           </div>
           <div className="social-links">
             <div

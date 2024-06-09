@@ -46,7 +46,7 @@
 .nav-button {
   position: relative; /* Pour positionner le pseudo-élément par rapport au bouton */
   background-color: #111927;
-  color: #b0b0b0;
+  color: #c2e6ff;
   border: none;
   padding: 0.5rem 1rem;
   border-radius: 20px;
@@ -87,7 +87,7 @@
 
 .nav-button:not(.selected) {
   background-color: #0d2847;
-  color: #b0b0b0;
+  color: #c2e6ff;
 }
 
 .nav-button:hover {
@@ -98,7 +98,7 @@
 .menu-icon {
   display: none;
   cursor: pointer;
-  color: #b0b0b0;
+  color: #c2e6ff;
   position: absolute;
   right: 20px;
   top: 20px;
