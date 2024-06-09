@@ -80,9 +80,7 @@ const HomePage = () => {
             , currently enhancing my skills in building interactive and
             responsive web applications with Node.js and React. With a solid
             background in Rails, JavaScript, React , HTML and CSS I am focused
-            on improving user experiences and web application performance. From
-            design to development, I can help you with your web development
-            projects.
+            on improving user experiences and web application performance.
           </div>
           <div className="social-links">
             <div

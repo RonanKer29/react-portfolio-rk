@@ -1,25 +1,44 @@
 import React from "react";
 import "../styles/contactCard.css";
-import { FaPaperPlane } from "react-icons/fa";
 
 const ContactCard = () => {
   return (
-    <div className="contact-card">
-      <div className="contact-message">
-        <h1>
-          Say, <br />
-          Hello{" "}
-          <span role="img" aria-label="wave">
-            👋
-          </span>
-        </h1>
+    <div className="contact-container">
+      <div className="contact-info">
+        <div className="status">
+          <span className="status-indicator"></span>
+          Available for new opportunities
+        </div>
+        <h2>
+          Contact me<span className="highlight"> .</span>
+        </h2>
+        <p>
+          From design to development, I can help you with your web development
+          projects.
+        </p>
+        <div className="contact-details">
+          <div className="contact-detail">
+            <span role="img" aria-label="phone">
+              📞
+            </span>{" "}
+            (+41) (0)76 585 68 22
+          </div>
+          <div className="contact-detail">
+            <span role="img" aria-label="email">
+              📧
+            </span>{" "}
+            kervella.ronan@hotmail.com
+          </div>
+        </div>
       </div>
-      <div className="contact-input">
-        <textarea placeholder="Click to message" rows="3"></textarea>
-        <button type="button">
-          <FaPaperPlane size={24} />
-        </button>
-      </div>
+      <form className="contact-form">
+        <input type="text" placeholder="Fullname" />
+        <input type="email" placeholder="Email" />
+        <input type="tel" placeholder="Phone" />
+        <input type="text" placeholder="Subject of your message" />
+        <textarea placeholder="Message"></textarea>
+        <button className="contact-button">SEND</button>
+      </form>
     </div>
   );
 };
